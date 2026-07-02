@@ -1,13 +1,19 @@
-# 🛢 Oil Presence Prediction using Machine Learning
+# 🛢 Oil Presence Prediction
 
 An end-to-end **Machine Learning** project that predicts the probability of oil occurrence using geological, seismic, and petroleum engineering parameters. This project combines **Machine Learning**, **Deep Learning**, **Petroleum Engineering concepts**, **Feature Engineering**, **Model Explainability**, and **Streamlit Deployment** to simulate an intelligent reservoir screening system.
 
 > **⚠ Disclaimer**
 >
-> This project has been developed for **educational and portfolio purposes only**.
 >
 > The model has been trained using a **synthetic geological dataset**, therefore the predictions, engineered features, and drilling recommendations should **not** be interpreted as real-world petroleum exploration decisions. Actual reservoir evaluation requires detailed geological, geophysical, geochemical, and reservoir engineering studies.
 
+---
+
+# Live Demo
+-link
+---
+# LinkedIn Profile
+-link
 ---
 
 # 🚀 Features
@@ -39,8 +45,6 @@ The project uses a **synthetic geological dataset** containing reservoir and sei
 - Estimated Reservoir Depth
 - Distance to Existing Oil Field
 
-The synthetic dataset was created for educational purposes to simulate realistic petroleum exploration scenarios.
-
 ---
 
 # ⚙ Petroleum Engineering Feature Engineering
@@ -67,7 +71,7 @@ Measures the combined influence of porosity and permeability.
 **Formula**
 
 ```text
-Pore Connectivity Index = Porosity × Permeability
+Pore Connectivity Index = sqrt of(Porosity × Permeability)
 ```
 
 **Significance**
@@ -237,16 +241,13 @@ The deployed web application provides:
 Oil-Presence-Prediction/
 │
 ├── app.py
-├── oil_prob_xgb.json (or oil_prob_xgb.pkl)
+├── oil_prob_xgb.json
 ├── scaler.pkl
 ├── feature_columns.pkl
 ├── requirements.txt
 ├── README.md
-├── Oil_Presence_Prediction.ipynb
-│
-├── screenshots/
-│
-└── dataset/
+├── PROJECT_4.ipynb
+
 ```
 
 ---
@@ -256,7 +257,7 @@ Oil-Presence-Prediction/
 ### Clone Repository
 
 ```bash
-git clone https://github.com/yourusername/Oil-Presence-Prediction.git
+git clone https://github.com/SAYANDAS2109/OIL_PRESENCE_PREDICTOR
 ```
 
 ### Install Dependencies
@@ -294,25 +295,8 @@ streamlit run app.py
 - Integration with Real Geological Datasets
 - Well Log Analysis
 - Reservoir Simulation Integration
-- GIS-Based Visualization
-- Cloud Deployment
 - Production Forecasting
 - Multi-Class Reservoir Classification
 
 ---
 
-# 👨‍💻 Author
-
-**Elite Devill**
-
-Petroleum Engineering Student | Machine Learning Enthusiast | AI & Data Science
-
----
-
-## ⭐ If you found this project interesting, consider giving it a star!
-
-👨‍💻 Author
-
-Elite Devill
-
-Petroleum Engineering Student | Machine Learning Enthusiast | AI & Data Science
