@@ -10,10 +10,10 @@ An end-to-end **Machine Learning** project that predicts the probability of oil 
 ---
 
 # Live Demo
--link
+-[link](https://oilpresencepredictor-nxgzpsnjjtqbqthcyfb6ij.streamlit.app/)
 ---
 # LinkedIn Profile
--link
+-[link](https://www.linkedin.com/in/sayan-das-1466b1369/)
 ---
 
 # 🚀 Features
