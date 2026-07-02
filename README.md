@@ -1,75 +1,106 @@
-🛢 Oil Presence Prediction using Machine Learning
+# 🛢 Oil Presence Prediction using Machine Learning
 
-A complete end-to-end Machine Learning project that predicts the probability of oil occurrence using geological, seismic, and petroleum engineering parameters.
+An end-to-end **Machine Learning** project that predicts the probability of oil occurrence using geological, seismic, and petroleum engineering parameters. This project combines **Machine Learning**, **Deep Learning**, **Petroleum Engineering concepts**, **Feature Engineering**, **Model Explainability**, and **Streamlit Deployment** to simulate an intelligent reservoir screening system.
 
-The project combines Petroleum Engineering concepts, Feature Engineering, Machine Learning, Deep Learning, Model Explainability, and Streamlit Deployment to simulate an intelligent reservoir screening system.
+> **⚠ Disclaimer**
+>
+> This project has been developed for **educational and portfolio purposes only**.
+>
+> The model has been trained using a **synthetic geological dataset**, therefore the predictions, engineered features, and drilling recommendations should **not** be interpreted as real-world petroleum exploration decisions. Actual reservoir evaluation requires detailed geological, geophysical, geochemical, and reservoir engineering studies.
 
-Note
+---
 
-This project has been developed for educational and portfolio purposes.
-The model has been trained using a synthetic geological dataset, therefore predictions and engineering indicators should not be interpreted as real exploration recommendations.
+# 🚀 Features
 
-🚀 Project Highlights
-End-to-End Machine Learning Pipeline
-Geological Data Preprocessing
-Petroleum Engineering Feature Engineering
-Hyperparameter Tuning
-Deep Learning Model Comparison
-SHAP Explainability
-Interactive Streamlit Dashboard
-Reservoir Engineering Summary
-Drilling Recommendation System
-Responsive User Interface
-📊 Dataset
+- Predicts probability of oil occurrence
+- Interactive Streamlit Web Application
+- Petroleum Engineering inspired Feature Engineering
+- Reservoir Quality Classification
+- Hydrocarbon Prospect Score
+- Reservoir Engineering Summary
+- Prediction Confidence Visualization
+- Drilling Recommendation System
+- SHAP Explainability
+- Responsive Two-Column User Interface
+- Feature Information Sidebar
+- Educational Reservoir Screening Tool
 
-The model was trained on a synthetic geological dataset containing reservoir properties such as:
+---
 
-Rock Type
-Trap Type
-Porosity
-Permeability
-Seismic Score
-Reservoir Depth
-Distance to Existing Oil Field
+# 📊 Dataset
 
-The synthetic dataset was designed to simulate realistic petroleum exploration scenarios for machine learning experimentation.
+The project uses a **synthetic geological dataset** containing reservoir and seismic parameters including:
 
-⚙ Petroleum Engineering Feature Engineering
+- Rock Type
+- Trap Type
+- Porosity
+- Permeability
+- Seismic Score
+- Estimated Reservoir Depth
+- Distance to Existing Oil Field
 
-Several engineered features were created to improve model performance.
+The synthetic dataset was created for educational purposes to simulate realistic petroleum exploration scenarios.
 
-Reservoir Quality
+---
 
-Rule-based classification using Porosity and Permeability.
+# ⚙ Petroleum Engineering Feature Engineering
 
-Categories:
+Several engineering-inspired features were created to improve model performance.
 
-Excellent
-Good
-Average
-Poor
-Pore Connectivity Index
+## Reservoir Quality
 
-Measures the combined influence of storage capacity and fluid flow.
+A rule-based classification using Porosity and Permeability.
 
-Formula
+Classification:
 
+- Excellent
+- Good
+- Average
+- Poor
+
+---
+
+## Pore Connectivity Index
+
+Measures the combined influence of porosity and permeability.
+
+**Formula**
+
+```text
 Pore Connectivity Index = Porosity × Permeability
-Reservoir Flow Capacity
+```
+
+**Significance**
+
+Higher values indicate better interconnected pore spaces, improving hydrocarbon flow potential.
+
+---
+
+## Reservoir Flow Capacity
 
 Represents simplified reservoir productivity.
 
-Formula
+**Formula**
 
+```text
 Reservoir Flow Capacity =
 (Permeability × Porosity)
 / Reservoir Depth
-Hydrocarbon Prospect Score
+```
 
-Composite exploration score.
+**Significance**
 
-Formula
+Higher permeability and porosity improve reservoir productivity, while greater reservoir depth reduces flow capacity.
 
+---
+
+## Hydrocarbon Prospect Score
+
+Composite exploration score combining reservoir quality and seismic information.
+
+**Formula**
+
+```text
 Hydrocarbon Prospect Score
 
 =
@@ -78,124 +109,207 @@ Hydrocarbon Prospect Score
 0.35 × Normalized Permeability
 +
 0.30 × Seismic Score
+```
 
-These engineered features are engineering-inspired metrics created specifically for machine learning feature engineering.
+**Significance**
 
-They are not standard petroleum engineering equations and are intended only for educational demonstration.
+Provides a simplified estimate of hydrocarbon potential by combining reservoir properties with seismic interpretation.
 
-🤖 Machine Learning Models Evaluated
+> **Note**
+>
+> These engineered features are **engineering-inspired metrics** created specifically for machine learning feature engineering.
+>
+> They are **not standard petroleum engineering equations** and are intended only to improve predictive performance on the synthetic dataset.
+
+---
+
+# 🤖 Machine Learning Models Evaluated
 
 The following models were trained and compared:
 
-Logistic Regression
-Decision Tree
-Random Forest
-Tuned XGBoost
-Deep Neural Network (TensorFlow/Keras)
+- Logistic Regression
+- Decision Tree
+- Random Forest
+- Tuned XGBoost Classifier
+- Deep Neural Network (TensorFlow / Keras)
 
-After extensive evaluation and hyperparameter tuning, the Tuned XGBoost Classifier was selected for deployment because it achieved the best overall performance.
+After extensive evaluation and hyperparameter tuning, the **Tuned XGBoost Classifier** achieved the best overall performance and was selected for deployment.
 
-📈 Final Model Performance (Tuned XGBoost)
-Metric	Score
-Accuracy	91.10%
-Precision	92.76%
-Recall	73.74%
-F1 Score	82.16%
-ROC-AUC	87.81%
-🧠 Deep Learning Experiment
+---
 
-A fully connected Deep Neural Network (ANN) was also developed using TensorFlow/Keras.
+# 📈 Final Model Performance (Tuned XGBoost)
 
-The network included:
+| Metric | Score |
+|---------|-------|
+| Accuracy | **91.10%** |
+| Precision | **92.76%** |
+| Recall | **73.74%** |
+| F1 Score | **82.16%** |
+| ROC-AUC | **87.81%** |
 
-Dense Layers
-Batch Normalization
-Dropout Regularization
-Early Stopping
-Adam Optimizer
+---
 
-Although the ANN produced competitive results, the Tuned XGBoost model achieved superior overall performance and was therefore selected for deployment.
+# 🧠 Deep Learning Experiment
 
-🔍 Model Explainability
+A fully connected **Artificial Neural Network (ANN)** was developed using **TensorFlow/Keras** to compare its performance with traditional machine learning models.
 
-SHAP (SHapley Additive exPlanations) was used to interpret model predictions.
+The architecture includes:
 
-Visualizations include:
+- Dense Layers
+- ReLU Activation
+- Batch Normalization
+- Dropout Regularization
+- Early Stopping
+- Adam Optimizer
 
-SHAP Summary Plot
-SHAP Feature Importance Plot
+Although the ANN produced competitive performance, the **Tuned XGBoost Classifier** achieved superior overall metrics and was selected for deployment.
 
-These explain how each geological feature contributes to the final prediction.
+---
 
-🌐 Streamlit Application
+# 🔍 Model Explainability
 
-The deployed application provides:
+To improve model interpretability, **SHAP (SHapley Additive exPlanations)** was used.
 
-Geological parameter input
-Prediction probability
-Reservoir Engineering Summary
-Drilling Recommendation
-Prediction Confidence
-Input Summary
-Engineered Feature Summary
-Feature Information Sidebar
-🛠 Tech Stack
-Programming
-Python
-Libraries
-Pandas
-NumPy
-Scikit-learn
-XGBoost
-TensorFlow / Keras
-SHAP
-Matplotlib
-Deployment
-Streamlit
-📂 Project Structure
+Generated visualizations include:
+
+- SHAP Summary Plot
+- SHAP Feature Importance Plot
+
+These explain how individual geological features contribute to the final prediction.
+
+---
+
+# 🌐 Streamlit Application
+
+The deployed web application provides:
+
+- Geological Parameter Input
+- Oil Presence Prediction
+- Prediction Probability
+- Reservoir Engineering Summary
+- Drilling Recommendation
+- Prediction Confidence Indicator
+- Engineered Feature Summary
+- Input Summary
+- Feature Information Sidebar
+- Synthetic Dataset Disclaimer
+
+---
+
+# 🛠 Technology Stack
+
+### Programming Language
+
+- Python
+
+### Machine Learning
+
+- Scikit-learn
+- XGBoost
+
+### Deep Learning
+
+- TensorFlow
+- Keras
+
+### Data Processing
+
+- Pandas
+- NumPy
+
+### Model Explainability
+
+- SHAP
+
+### Visualization
+
+- Matplotlib
+
+### Deployment
+
+- Streamlit
+
+---
+
+# 📂 Repository Structure
+
+```text
 Oil-Presence-Prediction/
-
-│── app.py
-│── oil_prob_xgb.json
-│── scaler.pkl
-│── feature_columns.pkl
-│── requirements.txt
-│── README.md
-│── Oil_Presence_Prediction.ipynb
-
+│
+├── app.py
+├── oil_prob_xgb.json (or oil_prob_xgb.pkl)
+├── scaler.pkl
+├── feature_columns.pkl
+├── requirements.txt
+├── README.md
+├── Oil_Presence_Prediction.ipynb
+│
 ├── screenshots/
 │
-├── models/
-│
 └── dataset/
-🚀 Installation
+```
 
-Clone the repository
+---
 
+# 🚀 Installation
+
+### Clone Repository
+
+```bash
 git clone https://github.com/yourusername/Oil-Presence-Prediction.git
+```
 
-Install dependencies
+### Install Dependencies
 
+```bash
 pip install -r requirements.txt
+```
 
-Run the application
+### Run Streamlit
 
+```bash
 streamlit run app.py
-📌 Future Improvements
-Integration with real geological datasets
-Well Log Analysis
-Reservoir Simulation Integration
-GIS-Based Visualization
-Cloud Deployment
-Multi-Class Reservoir Classification
-Time-Series Production Forecasting
-⚠ Disclaimer
+```
 
-This application is intended solely for educational purposes.
+---
 
-The model has been trained using a synthetic dataset and should not be used for real-world petroleum exploration or drilling decisions.
+# 🎯 Project Workflow
 
-Actual hydrocarbon exploration requires extensive geological, geophysical, geochemical, and reservoir engineering analysis beyond the scope of this project.
+1. Data Collection (Synthetic Geological Dataset)
+2. Data Cleaning & Preprocessing
+3. Exploratory Data Analysis (EDA)
+4. Petroleum Engineering Feature Engineering
+5. Feature Scaling & Encoding
+6. Machine Learning Model Training
+7. Hyperparameter Tuning
+8. Deep Learning Model Development
+9. Model Evaluation & Comparison
+10. SHAP Explainability
+11. Streamlit Deployment
+
+---
+
+# 📌 Future Improvements
+
+- Integration with Real Geological Datasets
+- Well Log Analysis
+- Reservoir Simulation Integration
+- GIS-Based Visualization
+- Cloud Deployment
+- Production Forecasting
+- Multi-Class Reservoir Classification
+
+---
+
+# 👨‍💻 Author
+
+**Elite Devill**
+
+Petroleum Engineering Student | Machine Learning Enthusiast | AI & Data Science
+
+---
+
+## ⭐ If you found this project interesting, consider giving it a star!
 
 👨‍💻 Author
 
